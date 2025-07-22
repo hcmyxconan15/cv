@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Nguyễn Hoài Phúc</title>
+    <!-- Import Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Import Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0d47a1; /* Dark Blue */
+            --secondary-color: #ffab40; /* Amber/Gold */
+            --text-color-light: #ffffff;
+            --text-color-dark: #333333;
+            --background-color: #f4f4f4;
+            --container-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color-dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1000px;
+            margin: 30px auto;
+            background-color: var(--text-color-light);
+            box-shadow: var(--container-shadow);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        /* --- Left Column --- */
+        .left-column {
+            background-color: var(--primary-color);
+            color: var(--text-color-light);
+            padding: 30px;
+            width: 35%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-pic-container {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .profile-pic {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .name {
+            font-size: 2em;
+            font-weight: 700;
+            margin: 0;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 1.1em;
+            font-weight: 500;
+            margin: 5px 0 25px 0;
+            text-align: center;
+            color: #e0e0e0;
+        }
+
+        .left-section {
+            width: 100%;
+            margin-bottom: 25px;
+        }
+
+        .left-section-title {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: var(--secondary-color);
+            padding-bottom: 5px;
+            border-bottom: 2px solid var(--secondary-color);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .contact-info ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .contact-info li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info i {
+            width: 20px;
+            text-align: center;
+            margin-right: 15px;
+            color: var(--secondary-color);
+        }
+
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .skills-list li {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 8px 12px;
+            border-radius: 5px;
+            margin-bottom: 8px;
+            font-size: 0.9em;
+        }
+
+        /* --- Right Column --- */
+        .right-column {
+            padding: 40px;
+            width: 65%;
+        }
+
+        .right-section {
+            margin-bottom: 30px;
+        }
+
+        .right-section-title {
+            font-size: 1.6em;
+            font-weight: 700;
+            color: var(--primary-color);
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--primary-color);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .experience-item, .education-item, .project-item {
+            margin-bottom: 25px;
+        }
+        
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .item-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            margin: 0;
+        }
+        
+        .item-subtitle {
+            font-size: 1em;
+            font-weight: 500;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        .item-date {
+            font-weight: 500;
+            color: #555;
+            white-space: nowrap;
+        }
+
+        .item-content ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .item-content ul li {
+            margin-bottom: 5px;
+        }
+
+        .project-tech {
+            margin-top: 10px;
+        }
+
+        .project-tech strong {
+            color: var(--primary-color);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                margin: 0;
+                border-radius: 0;
+            }
+            .left-column, .right-column {
+                width: 100%;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+            .item-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .item-date {
+                margin-top: 5px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- LEFT COLUMN -->
+        <div class="left-column">
+            <div class="profile-pic-container">
+                <!-- Thay thế bằng link ảnh của bạn -->
+                <img src="https://placehold.co/150x150/0d47a1/FFFFFF?text=Phuc" alt="Ảnh đại diện" class="profile-pic">
+            </div>
+            <h1 class="name">NGUYỄN HOÀI PHÚC</h1>
+            <p class="title">Unity Developer | Game Developer</p>
+
+            <div class="left-section contact-info">
+                <h2 class="left-section-title">Thông tin liên hệ</h2>
+                <ul>
+                    <li><i class="fas fa-phone"></i> 0582135081</li>
+                    <li><i class="fas fa-envelope"></i> hcmyxconan12@gmail.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 68B/11 Đặng Nguyên Cẩn, P.14, Q.6, TP.HCM</li>
+                    <li><i class="fab fa-github"></i> (Link GitHub của bạn)</li>
+                </ul>
+            </div>
+
+            <div class="left-section skills">
+                <h2 class="left-section-title">Kỹ năng</h2>
+                <ul class="skills-list">
+                    <li><strong>Game Dev:</strong> Unity (Thành thạo), C#, Cocos</li>
+                    <li><strong>Backend:</strong> NestJS (Thành thạo), Node.js</li>
+                    <li><strong>Blockchain:</strong> Smart Contract, Solidity, Web3.js</li>
+                    <li><strong>Công cụ:</strong> Git, CI/CD, Scrum, Jira</li>
+                    <li><strong>Cơ sở dữ liệu:</strong> PostgreSQL, MongoDB</li>
+                    <li><strong>Kỹ năng mềm:</strong> Giải quyết vấn đề, Làm việc nhóm</li>
+                </ul>
+            </div>
+            
+            <div class="left-section awards">
+                <h2 class="left-section-title">Giải thưởng</h2>
+                <ul class="skills-list">
+                    <li>(Điền giải thưởng nếu có)</li>
+                </ul>
+            </div>
+
+            <div class="left-section certificates">
+                <h2 class="left-section-title">Chứng chỉ</h2>
+                <ul class="skills-list">
+                    <li>(Điền chứng chỉ nếu có)</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="right-column">
+            <div class="right-section objective">
+                <h2 class="right-section-title">Mục tiêu nghề nghiệp</h2>
+                <p>Với 3 năm kinh nghiệm làm việc với Unity và phát triển game, cùng kiến thức về backend (NestJS) và công nghệ blockchain, tôi mong muốn được áp dụng những kỹ năng và sự nhiệt huyết của mình để đóng góp vào sự thành công của các dự án game sáng tạo và thử thách, hướng tới vai trò Technical Lead trong tương lai.</p>
+            </div>
+
+            <div class="right-section experience">
+                <h2 class="right-section-title">Kinh nghiệm làm việc</h2>
+                <div class="experience-item">
+                    <div class="item-header">
+                        <h3 class="item-title">Full-stack Game Developer</h3>
+                        <span class="item-date">05/2024 - Hiện tại</span>
+                    </div>
+                    <p class="item-subtitle">Startup Game Blockchain</p>
+                    <div class="item-content">
+                        <ul>
+                            <li>Phát triển chính cho dự án game trên Telegram, đạt mốc <strong>1 triệu người dùng</strong>.</li>
+                            <li><strong>Client:</strong> Lập trình gameplay, UI, tối ưu hiệu năng bằng <strong>Unity</strong> và <strong>Cocos</strong>.</li>
+                            <li><strong>Backend:</strong> Xây dựng và phát triển API cho game bằng <strong>NestJS</strong>.</li>
+                            <li><strong>Blockchain:</strong> Viết và triển khai <strong>Smart Contract (Solidity)</strong>.</li>
+                            <li><strong>DevOps:</strong> Tham gia xây dựng và cải thiện quy trình CI/CD.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <h3 class="item-title">Unity Developer</h3>
+                        <span class="item-date">03/2022 - 03/2024</span>
+                    </div>
+                    <p class="item-subtitle">Wolffun Game</p>
+                    <div class="item-content">
+                        <ul>
+                            <li><strong>Dự án Thetan Rival:</strong> Phát triển gameplay, hệ thống nhân vật.</li>
+                            <li><strong>Dự án Thetan Arena:</strong> Bảo trì, sửa lỗi và tối ưu hóa hiệu năng.</li>
+                            <li>Tích hợp các SDK của bên thứ ba (quảng cáo, phân tích).</li>
+                            <li>Làm việc trong môi trường Agile/Scrum, sử dụng Git để quản lý mã nguồn.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-section projects">
+                <h2 class="right-section-title">Dự án nổi bật</h2>
+                <div class="project-item">
+                    <h3 class="item-title">Telegram Game (1 triệu người dùng)</h3>
+                    <p class="item-subtitle">Game chiến thuật/casual trên nền tảng Telegram.</p>
+                    <div class="item-content">
+                        <p>Đảm nhận vai trò Full-stack, chịu trách nhiệm từ client, backend đến smart contract.</p>
+                        <p class="project-tech"><strong>Công nghệ:</strong> Unity, Cocos, NestJS, Smart Contract.</p>
+                    </div>
+                </div>
+                 <div class="project-item">
+                    <h3 class="item-title">Thetan Rival & Thetan Arena</h3>
+                    <p class="item-subtitle">Game MOBA/Party Game trên di động.</p>
+                    <div class="item-content">
+                        <p>Tham gia phát triển các tính năng gameplay cốt lõi và tối ưu hóa hiệu năng cho các sản phẩm đã có hàng triệu người chơi.</p>
+                        <p class="project-tech"><strong>Công nghệ:</strong> Unity, C#.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-section education">
+                <h2 class="right-section-title">Học vấn</h2>
+                <div class="education-item">
+                     <div class="item-header">
+                        <h3 class="item-title">ĐẠI HỌC CÔNG NGHỆ THÔNG TIN - ĐHQG TP.HCM</h3>
+                        <span class="item-date">2018 - 2022</span>
+                    </div>
+                    <p class="item-subtitle">Chuyên ngành: Kỹ thuật Phần mềm</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
