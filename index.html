@@ -231,16 +231,24 @@
             }
         }
         
+        /* Print-specific styles */
         @media print {
             body {
                 margin: 0;
                 background-color: #fff;
+                -webkit-print-color-adjust: exact; /* Important for Chrome/Safari */
+                print-color-adjust: exact; /* Standard */
             }
             .container {
                 box-shadow: none;
                 margin: 0;
-                max-width: 100%;
                 border-radius: 0;
+                width: 100%;
+                max-width: 100%;
+            }
+            .left-column {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
             }
         }
 
@@ -274,7 +282,7 @@
                     <li><strong>Game Dev:</strong> Unity (Thành thạo), C#, Cocos</li>
                     <li><strong>Backend:</strong> NestJS (Thành thạo), Node.js</li>
                     <li><strong>Blockchain:</strong> Smart Contract, Solidity, Web3.js</li>
-                    <li><strong>Công cụ:</strong> Git, CI/CD, Scrum, Jira</li>
+                    <li><strong>Công cụ:</strong> Git, CI/CD, Scrum, Jira, Photoshop (Chỉnh sửa UI)</li>
                     <li><strong>Cơ sở dữ liệu:</strong> PostgreSQL, MongoDB</li>
                     <li><strong>Kỹ năng mềm:</strong> Giải quyết vấn đề, Làm việc nhóm</li>
                 </ul>
