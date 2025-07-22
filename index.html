@@ -57,6 +57,7 @@
             overflow: hidden;
             border: 5px solid var(--secondary-color);
             margin-bottom: 20px;
+            background-color: #fff; /* Add a background color for fallback */
         }
 
         .profile-pic {
@@ -105,12 +106,23 @@
             margin-bottom: 10px;
             display: flex;
             align-items: center;
+            word-break: break-all;
         }
 
         .contact-info i {
             width: 20px;
             text-align: center;
             margin-right: 15px;
+            color: var(--secondary-color);
+        }
+        
+        .contact-info a {
+            color: var(--text-color-light);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-info a:hover {
             color: var(--secondary-color);
         }
 
@@ -157,6 +169,7 @@
             justify-content: space-between;
             align-items: baseline;
             margin-bottom: 5px;
+            flex-wrap: wrap;
         }
 
         .item-title {
@@ -176,6 +189,7 @@
             font-weight: 500;
             color: #555;
             white-space: nowrap;
+            padding-left: 10px;
         }
 
         .item-content ul {
@@ -213,6 +227,7 @@
             }
             .item-date {
                 margin-top: 5px;
+                padding-left: 0;
             }
         }
 
@@ -224,8 +239,8 @@
         <!-- LEFT COLUMN -->
         <div class="left-column">
             <div class="profile-pic-container">
-                <!-- Thay thế bằng link ảnh của bạn -->
-                <img src="https://placehold.co/150x150/0d47a1/FFFFFF?text=Phuc" alt="Ảnh đại diện" class="profile-pic">
+                <!-- Ảnh đại diện đã được cập nhật -->
+                <img src="https://scontent.fsgn2-7.fna.fbcdn.net/v/t39.30808-6/297893431_3225303497726827_3919961587931500371_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=dOZFzIG1_6AQ7kNvwHQJzgP&_nc_oc=Admiff5AdPrC3InRhNB5m_A_CE_MBW0lteCuJCZD7oL2rZZgEl9dHM2bKgc6_2jG8LA&_nc_zt=23&_nc_ht=scontent.fsgn2-7.fna&_nc_gid=3NNDC-CceF0YJgfRbVapnA&oh=00_AfRoOjbO-jorDaBtvv-EB5ikhOEOrW37ShBG-QquCgcfVQ&oe=6885A6E5" alt="Ảnh đại diện" class="profile-pic" onerror="this.onerror=null;this.src='https://placehold.co/150x150/0d47a1/FFFFFF?text=Phuc';">
             </div>
             <h1 class="name">NGUYỄN HOÀI PHÚC</h1>
             <p class="title">Unity Developer | Game Developer</p>
@@ -236,7 +251,7 @@
                     <li><i class="fas fa-phone"></i> 0582135081</li>
                     <li><i class="fas fa-envelope"></i> hcmyxconan12@gmail.com</li>
                     <li><i class="fas fa-map-marker-alt"></i> 68B/11 Đặng Nguyên Cẩn, P.14, Q.6, TP.HCM</li>
-                    <li><i class="fab fa-github"></i> (Link GitHub của bạn)</li>
+                    <li><i class="fab fa-github"></i> <a href="https://github.com/hcmyxconan15" target="_blank">github.com/hcmyxconan15</a></li>
                 </ul>
             </div>
 
@@ -251,18 +266,12 @@
                     <li><strong>Kỹ năng mềm:</strong> Giải quyết vấn đề, Làm việc nhóm</li>
                 </ul>
             </div>
-            
-            <div class="left-section awards">
-                <h2 class="left-section-title">Giải thưởng</h2>
-                <ul class="skills-list">
-                    <li>(Điền giải thưởng nếu có)</li>
-                </ul>
-            </div>
 
-            <div class="left-section certificates">
-                <h2 class="left-section-title">Chứng chỉ</h2>
+            <div class="left-section favorite-games">
+                <h2 class="left-section-title">Game yêu thích</h2>
                 <ul class="skills-list">
-                    <li>(Điền chứng chỉ nếu có)</li>
+                    <li>Game Gacha (Honkai: Star Rail, Sword of Convalaria)</li>
+                    <li>Game Idle/Clicker có chiều sâu</li>
                 </ul>
             </div>
 
@@ -335,11 +344,18 @@
                 <h2 class="right-section-title">Học vấn</h2>
                 <div class="education-item">
                      <div class="item-header">
-                        <h3 class="item-title">ĐẠI HỌC CÔNG NGHỆ THÔNG TIN - ĐHQG TP.HCM</h3>
-                        <span class="item-date">2018 - 2022</span>
-                    </div>
-                    <p class="item-subtitle">Chuyên ngành: Kỹ thuật Phần mềm</p>
+                         <h3 class="item-title">ĐẠI HỌC CÔNG NGHỆ THÔNG TIN - ĐHQG TP.HCM</h3>
+                         <span class="item-date">2022 - 2024</span>
+                     </div>
+                     <p class="item-subtitle">Văn bằng 2 - Chuyên ngành: Kỹ thuật Phần mềm</p>
                 </div>
+                <div class="education-item">
+                    <div class="item-header">
+                        <h3 class="item-title">HỌC VIỆN HÀNH CHÍNH QUỐC GIA</h3>
+                        <span class="item-date">2017 - 2021</span>
+                    </div>
+                    <p class="item-subtitle">Chuyên ngành: Thanh tra</p>
+               </div>
             </div>
 
         </div>
